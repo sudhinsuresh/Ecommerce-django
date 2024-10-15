@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: DjangoAk
-  namespace: namespace-workflow-1728972139038
+  namespace: django-aks
   labels:
     kubernetes.azure.com/generator: devhub
 spec:

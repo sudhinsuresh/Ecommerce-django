@@ -5,7 +5,7 @@ metadata:
   labels:
     app: DjangoAk
     kubernetes.azure.com/generator: devhub
-  namespace: namespace-workflow-1728972139038
+  namespace: django-aks
 spec:
   replicas: 1
   selector:
@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: DjangoAk
-          image: acrworkflow1728972139038.azurecr.io/image-workflow-1728972139038:latest
+          image: acrworkflow1728972648800.azurecr.io/image-workflow-1728972648800:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 8000
