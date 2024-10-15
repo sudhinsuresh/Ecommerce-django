@@ -39,8 +39,8 @@ on:
 
 env:
   ACR_RESOURCE_GROUP: Sudhin
-  AZURE_CONTAINER_REGISTRY: sudhinazurecicd
-  CONTAINER_NAME: ecommerce-django-1728971503132
+  AZURE_CONTAINER_REGISTRY: acrworkflow1728972139038
+  CONTAINER_NAME: image-workflow-1728972139038
   CLUSTER_RESOURCE_GROUP: Sudhin
   CLUSTER_NAME: demo-aks
   DEPLOYMENT_MANIFEST_PATH: |
@@ -48,7 +48,7 @@ env:
     manifests/service.yaml
   DOCKER_FILE: Dockerfile
   BUILD_CONTEXT_PATH: ./
-  NAMESPACE: django-aks
+  NAMESPACE: namespace-workflow-1728972139038
 
 jobs:
   buildImage:
