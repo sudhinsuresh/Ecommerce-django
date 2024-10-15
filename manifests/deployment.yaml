@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: DjangoAk
+  labels:
+    app: DjangoAk
+    kubernetes.azure.com/generator: devhub
+  namespace: django-aks
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: DjangoAk
+  template:
+    metadata:
+      labels:
+        app: DjangoAk
+    spec:
+      containers:
+        - name: DjangoAk
+          image: sudhinazurecicd.azurecr.io/ecommerce-django-1728971503132:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8000
