@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: DjangoAk
+  namespace: django-aks
+  labels:
+    kubernetes.azure.com/generator: devhub
+spec:
+  type: LoadBalancer
+  selector:
+    app: DjangoAk
+  ports:
+    - protocol: TCP
+      port: 8000
+      targetPort: 8000
